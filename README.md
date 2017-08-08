@@ -1,6 +1,9 @@
-# What the f*ck JavaScript? [![CC 4.0][license-image]][license-url]
+# What the f*ck JavaScript?
 
-> A list of funny and tricky examples of JavaScript.
+[![WTFPL 2.0][license-image]][license-url]
+[![NPM version][npm-image]][npm-url]
+
+> A list of funny and tricky JavaScript examples
 
 JavaScript is a great language. It has a simple syntax, large ecosystem and, what is the most important, great community.
 
@@ -9,6 +12,18 @@ At the same time, all we know that JavaScript is a quite funny language with tri
 Original idea of WTFJS belongs to [Brian Leroux](https://twitter.com/brianleroux). This list is highly inspired by his talk [**“WTFJS”** at dotJS 2012](https://www.youtube.com/watch?v=et8xNAc2ic8):
 
 [![dotJS 2012 - Brian Leroux - WTFJS](https://img.youtube.com/vi/et8xNAc2ic8/0.jpg)](https://www.youtube.com/watch?v=et8xNAc2ic8)
+
+# Node Packaged Manuscript
+
+You can install this handbook using `npm`. Just run:
+
+```
+$ npm install -g wtfjs
+```
+
+You should be able to run `wtfjs` at the command line now. This will open the manual in your selected `$PAGER`. Otherwise, you may continue reading on here.
+
+The source is available here: <https://github.com/denysdovhan/wtfjs>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -19,7 +34,7 @@ Original idea of WTFJS belongs to [Brian Leroux](https://twitter.com/brianleroux
 - [👀 Examples](#-examples)
   - [`[]` is equal `![]`](#-is-equal-)
   - [true is false](#true-is-false)
-  - [fooNaN](#foonan)
+  - [baNaNa](#banana)
   - [`NaN` is not a `NaN`](#nan-is-not-a-nan)
   - [It's a fail](#its-a-fail)
   - [`[]` is truthy, but not `true`](#-is-truthy-but-not-true)
@@ -46,7 +61,7 @@ Original idea of WTFJS belongs to [Brian Leroux](https://twitter.com/brianleroux
   - [Object as a key of object's property](#object-as-a-key-of-objects-property)
   - [Accessing prototypes with `__proto__`](#accessing-prototypes-with-__proto__)
   - [``` `${{Object}}` ```](#-object-)
-  - [Destructoring with default values](#destructoring-with-default-values)
+  - [Destructuring with default values](#destructuring-with-default-values)
   - [Dots and spreading](#dots-and-spreading)
   - [Labels](#labels)
   - [Nested labels](#nested-labels)
@@ -131,12 +146,16 @@ false == 'false'  // -> false
 
 * [**7.2.13** Abstract Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-abstract-equality-comparison)
 
-## fooNaN
-
-An old-school joke in JavaScript:
+## baNaNa
 
 ```js
-"foo" + + "bar" // -> 'fooNaN'
+'b' + 'a' + + 'a' + 'a'
+```
+
+This is an old-school joke in JavaScript, but remastered. Here's the original one:
+
+```js
+'foo' + + 'bar' // -> 'fooNaN'
 ```
 
 ### 💡 Explanation:
@@ -1096,3 +1115,6 @@ baz.valueOf() === 1  // -> true
 
 [license-url]: http://www.wtfpl.net
 [license-image]: https://img.shields.io/badge/License-WTFPL%202.0-lightgrey.svg?style=flat-square
+
+[npm-url]: https://npmjs.org/package/wtfjs
+[npm-image]: https://img.shields.io/npm/v/wtfjs.svg?style=flat-square

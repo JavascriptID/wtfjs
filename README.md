@@ -84,7 +84,7 @@ The source is available here: <https://github.com/denysdovhan/wtfjs>
 
 > Just for fun
 >
-> &mdash; _[**“Just for Fun: The Story of an Accidental Revolutionary”**](https://en.m.wikipedia.org/wiki/Just_for_Fun), Linus Torvalds_
+> &mdash; _[**“Just for Fun: The Story of an Accidental Revolutionary”**](https://en.wikipedia.org/wiki/Just_for_Fun), Linus Torvalds_
 
 The primary goal of this list is to collect some crazy examples and explain how they work, if possible. Just because it's fun to learn something that we didn't know before.
 
@@ -326,7 +326,7 @@ The concatenation happens. Step-by-step, it looks like this:
 
 ## Trailing commas in array
 
-You've created an array with 4 empty elements. Despite all, you'll get an arrary with three elements, because of trailing comas:
+You've created an array with 4 empty elements. Despite all, you'll get an arrary with three elements, because of trailing commas:
 
 ```js
 let a = [,,,]
@@ -574,7 +574,7 @@ Object.prototype.toString.call(null)
 This is caused by IEEE 754-2008 standard for Binary Floating-Point Arithmetic. At this scale, it rounds to the nearest even number. Read more:
 
 * [**6.1.6** The Number Type](https://www.ecma-international.org/ecma-262/#sec-ecmascript-language-types-number-type)
-* [IEEE 754](https://en.m.wikipedia.org/wiki/IEEE_754) on Wikipedia
+* [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) on Wikipedia
 
 ## Precision of `0.1 + 0.2`
 
@@ -714,7 +714,7 @@ typeof 'str' // -> 'string'
 
 ### 💡 Explanation:
 
-The `String` construnctor returns a string:
+The `String` constructor returns a string:
 
 ```js
 typeof String('str')   // -> 'string'
@@ -952,7 +952,7 @@ Interesting examples could be composed with spreading of arrays. Consider this:
 
 ### 💡 Explanation:
 
-Why `3`? When we use the spread operator TODO(link to spec), the `@@iterator` method is called, and the returned iterator is used to obtain the values to be iterated. The default iterator for string spreads a string into characters. After spreading, we pack these characters into an array. Then we spread this array again and pack it back to an array.
+Why `3`? When we use the [spread operator](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), the `@@iterator` method is called, and the returned iterator is used to obtain the values to be iterated. The default iterator for string spreads a string into characters. After spreading, we pack these characters into an array. Then we spread this array again and pack it back to an array.
 
 A `'...'` string consists with three `.` characters, so the length of resulting array is `3`.
 
